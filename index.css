@@ -1,0 +1,107 @@
+body {
+    overflow: hidden;
+  }
+
+.MainContent {
+    text-align: center;
+}
+
+#coins {
+    font-size:x-large;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+#dirtImg {
+    position: relative;
+    transform: scale(0.8);
+    margin-top: -5%;
+}
+
+#dirtName {
+    position: relative;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+#dirtImg:active {
+    transform: scale(1.01);
+}
+
+#dirtHealth {
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.upgrades {
+    position: absolute;
+    display: flex;
+    background-color: gray;
+    border-radius: 10px;
+    width: 20%;
+    top: 10px;
+}
+
+#pickaxeImg {
+    width: 64px;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+#tooltip {
+    position: absolute;
+    top: 83%;
+    left: 39%;
+    text-align: center;
+    display: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#damageTooltip {
+    position: absolute;
+    text-align: center;
+    top: -10px;
+    left: 45.5%;
+}
+
+#rightArrowImg {
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 65%;
+}
+
+#leftArrowImg {
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 27%;
+}
+
+#sand {
+    display: none;
+}
+
+#sandImg {
+    position: relative;
+    transform: scale(0.5);
+    top: -140px;
+}
+
+#sandName {
+    position: relative;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+#sandImg:active {
+    transform: scale(0.65);
+}
+
+#sandHealth {
+    position: absolute;
+    top: 470px;
+    left: 46.5%;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}

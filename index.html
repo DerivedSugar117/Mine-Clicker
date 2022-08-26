@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+`       <title>Mine Clicker</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div class="MainContent">
+            <p id="coins"><span id="Coins">0</span>$</p>
+
+            <div id="dirt">
+                <h1 id="dirtName">Dirt</h1>
+                <img id="dirtImg" src="dirt.png" onclick="damageDirt()">
+                <p id="dirtHealth">HP: <span id="dirtHP">10</span> / 10</p>
+            </div>
+
+            <div id="sand">
+                <h1 id="sanName">Sand</h1>
+                <img id="sandImg" src="sand.png" onclick="damageSand()">
+                <p id="sandHealth">HP: <span id="sandHP">34</span> / 34</p>
+            </div>
+        </div>
+
+        <div class="upgrades">
+            <img id="pickaxeImg" src="pickaxe.png" onmouseover="showTooltip()"
+            onmouseout="hideTooltip()" onclick="upgradeMiningPower()">
+        </div>
+        
+        <div id="damageTooltip"><h2>Damage: <span id="damage">1</span></h2></div>
+
+        <div id="tooltip">
+            <p>Upgrade Mining Power              
+               Lvl. <span id="minLvl">1</span>
+               POW: <span id="minPow">1 -> 2</span>
+            </p>
+            <span id="minCost">10</span>$
+         </div>
+
+         <div id="rightArrowImg">
+            <img src="rightArrow.png" width="100px">
+         </div>
+
+         <div id="leftArrowImg">
+            <img src="leftArrow.png" width="100px">
+         </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
