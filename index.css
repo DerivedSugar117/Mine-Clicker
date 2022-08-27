@@ -54,23 +54,26 @@ body {
     display: none;
 }
 
-#toolNameDiv {
+#miningPhasorImg {
     position: absolute;
-    text-align: center;
-    left: 46%;
-    top: 590px;
+    width: 256px;
+    top: 60%;
+    left: 40%;
+    display: none;
 }
 
 #toolStatusDiv {
     position: absolute;
     text-align: center;
     left: 46%;
-    top: 540px;
+    top: 500px;
 }
 
 #toolName {
-    position: relative;
+    position: absolute;
     font-size: 32px;
+    left: 46%;
+    top: 590px;
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }

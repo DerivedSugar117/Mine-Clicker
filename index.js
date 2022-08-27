@@ -1,4 +1,4 @@
-var coins = 10000
+var coins = 0
 var gems = 0
 var damage = 1
 var multiplier = 1
@@ -231,8 +231,8 @@ function upgradeTool()
         {
             coins = coins - upgradeToolCost
             upgradeToolCost = upgradeToolCost * 7.35
-            multiplier+= 8
-            autoMultiplier+= 5
+            multiplier+= 2
+            autoMultiplier+= 2
             damage = damage * multiplier
             autoMiningDamage = autoMiningDamage * autoMultiplier
             toolCounter++
@@ -242,6 +242,27 @@ function upgradeTool()
             document.getElementById("toolName").innerHTML = "Excavator"
             document.getElementById("upgradeToolName").innerHTML = "Excavator"
             document.getElementById("upgradeTool").innerHTML = "Excavator -> Mining Phasor"
+            updateNumbers()
+        }
+
+    } else if (toolCounter == 2)
+    {
+        if (coins >= upgradeToolCost)
+        {
+            coins = coins - upgradeToolCost
+            upgradeToolCost = upgradeToolCost * 7.35
+            multiplier+= 2
+            autoMultiplier+= 2
+            damage = damage * multiplier
+            autoMiningDamage = autoMiningDamage * autoMultiplier
+            toolCounter++
+            document.getElementById("toolStatus").innerText = ""
+            document.getElementById("excavatorImg").style.display = "none"
+            document.getElementById("miningPhasorImg").style.display = "block"
+            document.getElementById("toolName").innerHTML = "Mining Phasor"
+            document.getElementById("toolName").style.left = "42%"
+            document.getElementById("upgradeToolName").innerHTML = "Mining Phasor"
+            document.getElementById("upgradeTool").innerHTML = "Mining Phasor -> ???"
             updateNumbers()
         }
     }
@@ -537,10 +558,11 @@ setInterval(function()
 window.addEventListener("keydown", check1Pressed, false);
 window.addEventListener("keydown", check2Pressed, false);
 window.addEventListener("keydown", check3Pressed, false);
+window.addEventListener("keydown", check4Pressed, false);
 
 function check1Pressed(evt) {
     if (evt.keyCode == "49") {
-        upgradeMiningPower()
+        upgradeTool()
     }
 }
 
@@ -552,7 +574,13 @@ function check2Pressed(evt) {
 
 function check3Pressed(evt) {
     if (evt.keyCode == "51") {
-        upgradeTool()
+        upgradeLuck()
+    }
+}
+
+function check4Pressed(evt) {
+    if (evt.keyCode == "52") {
+        upgradeMiningPower()
     }
 }
 
