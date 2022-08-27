@@ -8,43 +8,118 @@
     <body>
         <div class="MainContent">
             <p id="coins"><span id="Coins">0</span>$</p>
+            <p id="gems"><span id="Gems">0</span> Gems</p>
+            <div id="damageTooltip"><h2>Damage: <span id="damage">1</span></h2></div>
+            <div id="autoDamageTooltip"><h2>DPS: <span id="autoDamage">0</span></h2></div>
 
             <div id="dirt">
+                <img id="dirtImg" src="/images/dirt.png" onclick="damageDirt()">
                 <h1 id="dirtName">Dirt</h1>
-                <img id="dirtImg" src="dirt.png" onclick="damageDirt()">
                 <p id="dirtHealth">HP: <span id="dirtHP">10</span> / 10</p>
             </div>
 
             <div id="sand">
-                <h1 id="sanName">Sand</h1>
-                <img id="sandImg" src="sand.png" onclick="damageSand()">
+                <img id="sandImg" src="/images/sand.png" onclick="damageSand()">
+                <h1 id="sandName">Sand</h1>
                 <p id="sandHealth">HP: <span id="sandHP">34</span> / 34</p>
+            </div>
+
+            <div id="limestone">
+                <img id="limestoneImg" src="/images/limestone.png" onclick="damageLimestone()">
+                <h1 id="limestoneName">Limestone</h1>
+                <p id="limestoneHealth">HP: <span id="limestoneHP">87</span> / 87</p>
+            </div>
+
+            <div id="coal">
+                <img id="coalImg" src="/images/coal.png" onclick="damageCoal()">
+                <h1 id="coalName">Coal</h1>
+                <p id="coalHealth">HP: <span id="coalHP">253</span> / 253</p>
+            </div>
+
+            <div id="marble">
+                <img id="marbleImg" src="/images/marble.png" onclick="damageMarble()">
+                <h1 id="marbleName">Marble</h1>
+                <p id="marbleHealth">HP: <span id="marbleHP">616</span> / 616</p>
+            </div>
+
+            <div id="quartz">
+                <img id="quartzImg" src="/images/quartz.png" onclick="damageQuartz()">
+                <h1 id="quartzName">Quartz</h1>
+                <p id="quartzHealth">HP: <span id="quartzHP">2352</span> / 2,352</p>
+            </div>
+
+
+            <div id="tools">
+                <div id="toolStatusDiv"><h1 id="toolStatus"></h1></div>
+                <div id="toolNameDiv"><span id="toolName">Shovel</span></div>
+                
+                <img id="shovelImg" src="/images/shovel.img">
+                <img id="drillImg" src="/images/drill.png">
+                <img id="excavatorImg" src="/images/excavator.png">
             </div>
         </div>
 
-        <div class="upgrades">
-            <img id="pickaxeImg" src="pickaxe.png" onmouseover="showTooltip()"
-            onmouseout="hideTooltip()" onclick="upgradeMiningPower()">
-        </div>
-        
-        <div id="damageTooltip"><h2>Damage: <span id="damage">1</span></h2></div>
 
-        <div id="tooltip">
+        <div class="upgrades">
+            <img id="pickaxeImg" src="/images/pickaxe.png" onmouseover="showUpgradeToolTooltip()"
+            onmouseout="hideUpgradeToolTooltip()" onclick="upgradeTool()">
+
+            <img id="cursorImg" src="/images/cursor.png" onmouseover="showAutoMiningTooltip()"
+            onmouseout="hideAutoMiningTooltip()" onclick="upgradeAutoMiningPower()">
+
+            <img id="upgradeLuckImg" src="/images/luck.png" onmouseover="showUpgradeLuckTooltip()"
+            onmouseout="hideUpgradeLuckTooltip()" onclick="upgradeLuck()">
+        </div>
+ 
+        <div id="upgradePower">
+            <img id="upgradeToolImg" src="/images/upgrade.png" onmouseover="showMiningPowerTooltip()"
+            onmouseout="hideMiningPowerTooltip()" onclick="upgradeMiningPower()">
+        </div>   
+
+        
+        <div id="upgradeToolTooltip">
+            <p>Upgrade Tool             
+                Current: <span id="upgradeToolName">Shovel</span>
+                <span id="upgradeTool">Shovel -> Drill</span>
+            </p>
+            <span id="upgradeToolCost">100</span>$
+            </div>
+        
+
+        <div id="miningPowerTooltip">
             <p>Upgrade Mining Power              
                Lvl. <span id="minLvl">1</span>
-               POW: <span id="minPow">1 -> 2</span>
+               <span>Adds 35% Power</span>
             </p>
-            <span id="minCost">10</span>$
+            <span id="miningPowerCost">1</span> Gems
          </div>
 
+         <div id="autoMiningTooltip">
+            <p>Upgrade Auto Mine             
+               Lvl. <span id="autoMinLvl">1</span>
+               POW: <span id="autoMinPow">1 -> 2</span>
+            </p>
+            <span id="autoMiningCost">35</span>$
+         </div>
+
+         <div id="luckTooltip">
+            <p>Upgrade Luck           
+               Lvl. <span id="luckLvl">1</span>
+               Luck: <span id="currentLuck">10% -> 11%</span>
+            </p>
+            <span id="upgradeLuckCost">50</span>$
+         </div>
+
+
          <div id="rightArrowImg">
-            <img src="rightArrow.png" width="100px">
+            <img src="/images/rightArrow.png" width="100px">
          </div>
 
          <div id="leftArrowImg">
-            <img src="leftArrow.png" width="100px">
+            <img src="/images/leftArrow.png" width="100px">
          </div>
 
+         
         <script src="index.js"></script>
     </body>
 </html>
